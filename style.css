@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /*sayfadaki bütün font değerlerini bu 10 px'li baz alarak orantısal sekilde oluşturacağız
+    peki bu ne işimiz yarayacak? biz örneğin mobil için tasarım yaptığımızda media query'de html'in
+    fon size'ini 8px' indirdiğimizde tüm değerler oran olarak düşecek ve mobil için tekrar margin padding vs.
+    değerlerini oluşturmamıza gerek kalmıyacak.*/
+    font-size: 6px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    /*body etiketi için 16px'lik değer kullanmış olduk tüm sayfada margin,padding değerlerini 10px
+    baz alarak orantısal şekilde olusturacağız.*/
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-align: center;
+    background-color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    padding: 1.6rem 0;
+}
+
+
+/*resimlerin boyutunu ayarladık*/
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+
+/*HEADER*/
+
+header {
+    /* header in yüksekliğini 450px verdik*/
+    height: 45rem;
+}
+
+header .bg-image {
+    /*image'nin position'unu absolute yaparak akışın dışına aldık ve yazıları üzerine aldık*/
+    position: absolute;
+    background-image: url(image/header.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 45rem;
+    width: 100%;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+header h1 {
+    padding: 11rem;
+    /*heryerden 110 px padding verdik fakat alt kısımdan kaldırdık*/
+    padding-bottom: 0;
+}
+
+.btn {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    border: 1px solid #333;
+    padding: 1.6rem 3.2rem;
+    margin: 0.5rem 0;
+    transition: all 0.5s;
+}
+
+.btn:hover {
+    background: #eaeaea;
+    color: #333;
+}
+
+
+/*SECTİON-a*/
+
+#section-a {
+    background-color: #eaeaea;
+    color: #333;
+    padding: 3.2rem 0;
+}
+
+
+/*SECTİON-b*/
+
+#section-b {
+    padding: 2rem;
+}
+
+#section-b ul {
+    list-style: none;
+}
+
+#section-b li {
+    background: #fff;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+
+/*resimleri kart haline getirdik*/
+
+.col-content {
+    padding: 1.5rem;
+}
+
+
+/*SECTİON-c*/
+
+#section-c {
+    background-color: #aeaeae;
+    color: #333;
+    padding: 5rem;
+}
+
+
+/*SECTİON-d*/
+
+#section-d .box {
+    padding: 5rem;
+}
+
+#section-d .box:first-child {
+    background-color: #2690d4;
+}
+
+
+/*FOOTER*/
+
+footer {
+    padding: 4rem;
+    background-color: #000;
+}
+
+footer a {
+    color: #2690d4;
+}
+
+@media screen and (min-width:800px) {
+    #section-b li {
+        width: 28%;
+        margin: 1%;
+        display: inline-block;
+    }
+    .box {
+        width: 50%;
+        float: left;
+    }
+    html {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width:1400px) {
+    html {
+        font-size: 12px;
+    }
+}
